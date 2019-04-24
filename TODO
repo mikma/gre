@@ -1,0 +1,14 @@
+* Verify tunnel MTU
+
+   RFC 7676 section "3.2.  MTU Considerations"
+
+   Before activating a GRE tunnel and periodically thereafter, the GRE
+   ingress node MUST verify the tunnel's ability to carry a 1280-octet
+   IPv6 payload packet from ingress to egress, without fragmenting the
+   payload.  Having executed those procedures, the GRE ingress node MUST
+   activate or deactivate the tunnel accordingly.
+
+   Implementation details regarding the above-mentioned verification
+   procedures are beyond the scope of this document.  However, a GRE
+   ingress node can verify tunnel capabilities by sending a 1280-octet
+   IPv6 packet addressed to itself through the tunnel under test.
